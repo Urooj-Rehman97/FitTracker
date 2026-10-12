@@ -47,7 +47,7 @@ app.use(
   cors({
     origin:
       process.env.CLIENT_URL ||
-      "http://localhost:5173",
+      "https://fittracker-1-x7ry.onrender.com/",
     credentials: true,
   })
 );

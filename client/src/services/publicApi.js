@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://fittracker-4ifk.onrender.com";
+const API_BASE_URL = "https://fittracker-4ifk.onrender.com/api";
 
 const publicRequest = async (endpoint, options = {}) => {
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
