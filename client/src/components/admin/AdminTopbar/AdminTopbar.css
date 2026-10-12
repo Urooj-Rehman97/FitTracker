@@ -1,0 +1,274 @@
+.admin-topbar {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.admin-page-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-page-heading span {
+  color: #9aa2ad;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+.admin-page-heading h1 {
+  margin: 0;
+  color: #20262d;
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.admin-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-search {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e3e7ec;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #fafbfc;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.admin-search svg {
+  color: #9ca5af;
+  font-size: 13px;
+}
+
+.admin-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 9px;
+  color: #333333;
+  font-size: 13px;
+}
+
+.admin-search input::placeholder {
+  color: #a4abb3;
+}
+
+.admin-theme-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e3e7ec;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #68727e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-theme-btn:hover {
+  background: #f1f3f5;
+  color: #198754;
+  border-color: #ced4da;
+  transform: translateY(-1px);
+}
+
+.admin-theme-btn svg {
+  font-size: 15px;
+}
+
+.admin-notification-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e3e7ec;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #68727e;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.admin-notification-btn:hover {
+  background: #f8f9fa;
+  color: #198754;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.admin-topbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-topbar-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-topbar-user strong {
+  color: #252b32;
+  font-size: 12px;
+  transition: color 0.25s ease;
+}
+
+.admin-topbar-user span {
+  color: #9aa2ad;
+  font-size: 10px;
+  margin-top: 2px;
+  transition: color 0.25s ease;
+}
+
+.admin-profile-arrow {
+  color: #9da5ae;
+  font-size: 10px;
+  margin-left: 2px;
+  transition: color 0.25s ease;
+}
+
+body.fittrack-admin-dark-mode .admin-topbar {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-page-heading h1 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-page-heading span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-search {
+  background: #111827;
+  border-color: #4b5563;
+}
+
+body.fittrack-admin-dark-mode .admin-search svg {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-search input {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-search input::placeholder {
+  color: #6b7280;
+}
+
+body.fittrack-admin-dark-mode .admin-theme-btn,
+body.fittrack-admin-dark-mode .admin-notification-btn {
+  background: #111827;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+body.fittrack-admin-dark-mode .admin-theme-btn:hover,
+body.fittrack-admin-dark-mode .admin-notification-btn:hover {
+  background: #374151;
+  color: #34d399;
+  border-color: #4b5563;
+}
+
+body.fittrack-admin-dark-mode .admin-topbar-user strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-topbar-user span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-profile-arrow {
+  color: #9ca3af;
+}
+
+@media (max-width: 767px) {
+  .admin-topbar {
+    padding: 0 20px;
+  }
+
+  .admin-search {
+    width: 180px;
+  }
+
+  .admin-topbar-user,
+  .admin-profile-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .admin-topbar {
+    padding: 0 15px;
+  }
+
+  .admin-page-heading h1 {
+    font-size: 18px;
+  }
+
+  .admin-search {
+    display: none;
+  }
+
+  .admin-topbar-right {
+    gap: 8px;
+  }
+}

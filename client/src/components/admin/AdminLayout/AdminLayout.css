@@ -1,0 +1,180 @@
+.admin-layout {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+  overflow-x: hidden;
+  transition: background 0.25s ease;
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  margin-left: 260px;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+  transition: background 0.25s ease;
+}
+
+.admin-content {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  min-height: calc(100vh - 72px);
+  box-sizing: border-box;
+  background: #f5f7fb;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+body.fittrack-admin-dark-mode {
+  background: #111827;
+  color: #f3f4f6;
+  transition: background 0.25s ease;
+}
+
+body.fittrack-admin-dark-mode .admin-layout {
+  background: #111827;
+}
+
+body.fittrack-admin-dark-mode .admin-main {
+  background: #111827;
+}
+
+body.fittrack-admin-dark-mode .admin-content {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-page-header h1,
+body.fittrack-admin-dark-mode .admin-page-heading h1 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-page-header p,
+body.fittrack-admin-dark-mode .admin-page-heading span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .settings-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .settings-card-header {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .settings-card-header h2 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .settings-card-header p {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .settings-field label {
+  color: #d1d5db;
+}
+
+body.fittrack-admin-dark-mode .settings-field input,
+body.fittrack-admin-dark-mode .settings-field select {
+  color: #f3f4f6;
+  background: #111827;
+  border-color: #4b5563;
+}
+
+body.fittrack-admin-dark-mode .settings-field input::placeholder {
+  color: #6b7280;
+}
+
+body.fittrack-admin-dark-mode .settings-field input:focus,
+body.fittrack-admin-dark-mode .settings-field select:focus {
+  border-color: #198754;
+  background: #111827;
+}
+
+body.fittrack-admin-dark-mode .security-password-row {
+  background: #111827;
+  border-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .security-password-title {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .security-password-row p {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .settings-toggle-item {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .toggle-content strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .toggle-content span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .settings-outline-btn {
+  background: transparent;
+  color: #34d399;
+  border-color: #198754;
+}
+
+body.fittrack-admin-dark-mode .settings-outline-btn:hover {
+  background: #198754;
+  color: #ffffff;
+}
+
+body.fittrack-admin-dark-mode .admin-btn-secondary {
+  color: #d1d5db;
+  background: #1f2937;
+  border-color: #4b5563;
+}
+
+body.fittrack-admin-dark-mode .admin-btn-secondary:hover {
+  background: #374151;
+}
+
+
+@media (min-width: 1400px) {
+  .admin-content {
+    padding: 32px 36px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .admin-main {
+    margin-left: 260px;
+  }
+
+  .admin-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .admin-main {
+    margin-left: 0;
+  }
+
+  .admin-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .admin-content {
+    padding: 20px 15px;
+  }
+}

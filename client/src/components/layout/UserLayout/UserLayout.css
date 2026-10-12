@@ -1,0 +1,47 @@
+.user-layout {
+  min-height: 100vh;
+  background: #f7f9f8;
+}
+
+.user-main {
+  min-height: 100vh;
+  margin-left: 245px;
+}
+
+.user-content {
+  min-height: calc(100vh - 70px);
+  padding: 30px;
+}
+
+body.fittrack-dark-mode {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+body.fittrack-dark-mode .user-layout {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .user-main {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .user-content {
+  background: #111827;
+}
+
+@media (max-width: 991px) {
+  .user-main {
+    margin-left: 0;
+  }
+
+  .user-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .user-content {
+    padding: 18px 14px;
+  }
+}

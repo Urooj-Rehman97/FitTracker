@@ -1,0 +1,954 @@
+.admin-analytics-page {
+  min-height: 100%;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.admin-analytics-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.admin-analytics-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #198754;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.admin-analytics-header h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.admin-analytics-header p {
+  margin: 7px 0 0;
+  color: #7b8794;
+  font-size: 14px;
+}
+
+.admin-analytics-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-analytics-period {
+  min-width: 155px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #dfe3e8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #253858;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-analytics-period:hover {
+  border-color: #c8ced6;
+}
+
+.admin-analytics-period:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.1);
+}
+
+.admin-analytics-refresh {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dfe3e8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-analytics-refresh:hover:not(:disabled) {
+  color: #198754;
+  border-color: #198754;
+  background: #f0fdf4;
+  transform: translateY(-1px);
+}
+
+.admin-analytics-refresh:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.admin-analytics-refresh.is-refreshing {
+  background: #eaf7f0;
+  border-color: #198754;
+  color: #198754;
+}
+
+.admin-analytics-refresh-icon {
+  font-size: 14px;
+}
+
+.spinning {
+  animation: adminAnalyticsSpin 0.8s linear infinite;
+}
+
+.admin-analytics-period-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #dceee2;
+  border-radius: 12px;
+  background: #f4faf6;
+}
+
+.admin-analytics-period-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-analytics-period-info span {
+  color: #7b8794;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-analytics-period-info strong {
+  color: #198754;
+  font-size: 14px;
+}
+
+.admin-analytics-period-info small {
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.admin-analytics-inline-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.admin-analytics-inline-error svg {
+  flex-shrink: 0;
+}
+
+.admin-analytics-inline-error span {
+  flex: 1;
+}
+
+.admin-analytics-inline-error button {
+  padding: 7px 11px;
+  border: 0;
+  border-radius: 7px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-analytics-inline-error button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.admin-analytics-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 108px;
+  padding: 20px;
+  border: 1px solid #e8ecf1;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  transition: 0.2s ease;
+}
+
+.admin-analytics-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+}
+
+.admin-analytics-stat-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.admin-analytics-stat-icon.users {
+  background: #eaf7f0;
+  color: #198754;
+}
+
+.admin-analytics-stat-icon.workouts {
+  background: #eaf7f0;
+  color: #198754;
+}
+
+.admin-analytics-stat-icon.nutrition {
+  background: #fff4e8;
+  color: #d97706;
+}
+
+.admin-analytics-stat-icon.goals {
+  background: #fff8df;
+  color: #b7791f;
+}
+
+.admin-analytics-stat-icon.progress {
+  background: #f1edff;
+  color: #6d4aff;
+}
+
+.admin-analytics-stat-content {
+  min-width: 0;
+}
+
+.admin-analytics-stat-content > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #7b8794;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-analytics-stat-content strong {
+  display: block;
+  color: #253858;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.admin-analytics-stat-content small {
+  display: block;
+  margin-top: 5px;
+  color: #9aa5b1;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-analytics-card {
+  min-height: 280px;
+  padding: 22px;
+  border: 1px solid #e8ecf1;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.admin-analytics-card-header {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.admin-analytics-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-analytics-card-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-analytics-card-icon.users {
+  background: #eaf7f0;
+  color: #198754;
+}
+
+.admin-analytics-card-icon.workouts {
+  background: #eaf7f0;
+  color: #198754;
+}
+
+.admin-analytics-card-icon.nutrition {
+  background: #fff4e8;
+  color: #d97706;
+}
+
+.admin-analytics-card-icon.goals {
+  background: #fff8df;
+  color: #b7791f;
+}
+
+.admin-analytics-card-title h3 {
+  margin: 0;
+  color: #253858;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.admin-analytics-card-title p {
+  margin: 4px 0 0;
+  color: #9aa5b1;
+  font-size: 12px;
+}
+
+.admin-analytics-list {
+  padding-top: 7px;
+}
+
+.admin-analytics-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 4px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.admin-analytics-list-item:last-child {
+  border-bottom: 0;
+}
+
+.admin-analytics-list-item span {
+  color: #4f5d6b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-analytics-list-item strong {
+  color: #253858;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.admin-analytics-list-item strong.positive {
+  color: #198754;
+}
+
+.admin-analytics-list-item strong.blue {
+  color: #2563eb;
+}
+
+.admin-analytics-mini-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 9px 11px;
+  border: 1px solid #edf0f3;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #7b8794;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-analytics-mini-summary svg {
+  color: #198754;
+}
+
+.admin-analytics-progress {
+  margin-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f3;
+}
+
+.admin-analytics-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.admin-analytics-progress-top span {
+  color: #7b8794;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-analytics-progress-top strong {
+  color: #253858;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-analytics-progress-track {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.admin-analytics-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #198754;
+  transition: width 0.4s ease;
+}
+
+.admin-analytics-footer-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #dceee2;
+  border-radius: 14px;
+  background: #f4faf6;
+}
+
+.admin-analytics-footer-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #198754;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-analytics-footer-content {
+  flex: 1;
+}
+
+.admin-analytics-footer-content h3 {
+  margin: 0 0 4px;
+  color: #253858;
+  font-size: 15px;
+}
+
+.admin-analytics-footer-content p {
+  margin: 0;
+  color: #4f5d6b;
+  font-size: 13px;
+}
+
+.admin-analytics-footer-rate {
+  min-width: 120px;
+  padding-left: 20px;
+  border-left: 1px solid #cfe7d8;
+  text-align: right;
+}
+
+.admin-analytics-footer-rate span {
+  display: block;
+  margin-bottom: 3px;
+  color: #7b8794;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-analytics-footer-rate strong {
+  color: #198754;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.admin-analytics-loading {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7b8794;
+}
+
+.admin-analytics-spinner {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 15px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #198754;
+  border-radius: 50%;
+  animation: adminAnalyticsSpin 0.8s linear infinite;
+}
+
+.admin-analytics-loading p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-analytics-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+  border: 1px solid #fecaca;
+  border-radius: 14px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.admin-analytics-error-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.admin-analytics-error strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.admin-analytics-error p {
+  margin: 0 0 14px;
+  color: #991b1b;
+  font-size: 13px;
+}
+
+.admin-analytics-retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 8px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-analytics-retry:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-page {
+  background: #111827;
+  color: #d1d5db;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-header h1 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-header p {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-eyebrow {
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period {
+  background: #111827;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period:hover {
+  border-color: #6b7280;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.18);
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period-info {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period-info span,
+body.fittrack-admin-dark-mode .admin-analytics-period-info small {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-period-info strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-content > span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-content strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-content small {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-icon.users,
+body.fittrack-admin-dark-mode .admin-analytics-stat-icon.workouts {
+  background: #064e3b;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-icon.nutrition {
+  background: #431407;
+  color: #fb923c;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-icon.goals {
+  background: #422006;
+  color: #fbbf24;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-stat-icon.progress {
+  background: #2e1065;
+  color: #a78bfa;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-header {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-title h3 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-title p {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-icon.users,
+body.fittrack-admin-dark-mode .admin-analytics-card-icon.workouts {
+  background: #064e3b;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-icon.nutrition {
+  background: #431407;
+  color: #fb923c;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-card-icon.goals {
+  background: #422006;
+  color: #fbbf24;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-list-item {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-list-item span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-list-item strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-list-item strong.positive {
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-list-item strong.blue {
+  color: #60a5fa;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-mini-summary {
+  background: #111827;
+  border-color: #374151;
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-mini-summary svg {
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-progress {
+  border-top-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-progress-top span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-progress-top strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-progress-track {
+  background: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-progress-fill {
+  background: #198754;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-content h3 {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-content p {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-rate {
+  border-left-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-rate span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-footer-rate strong {
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-refresh {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-refresh:hover:not(:disabled) {
+  background: #374151;
+  border-color: #198754;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-refresh.is-refreshing {
+  background: #064e3b;
+  border-color: #198754;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-loading {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-spinner {
+  border-color: #374151;
+  border-top-color: #198754;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-inline-error {
+  background: #3f1d1d;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-error {
+  background: #1f2937;
+  border-color: #374151;
+  color: #fca5a5;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-error-icon {
+  background: #3f1d1d;
+  color: #fca5a5;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-error strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-analytics-error p {
+  color: #9ca3af;
+}
+
+@media (max-width: 1250px) {
+  .admin-analytics-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 950px) {
+  .admin-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-analytics-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-analytics-actions {
+    width: 100%;
+  }
+
+  .admin-analytics-period {
+    flex: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-analytics-page {
+    padding: 20px 15px;
+  }
+
+  .admin-analytics-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .admin-analytics-stat-card {
+    min-height: 95px;
+    padding: 15px;
+  }
+
+  .admin-analytics-stat-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  .admin-analytics-stat-content strong {
+    font-size: 21px;
+  }
+
+  .admin-analytics-period-info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .admin-analytics-footer-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .admin-analytics-footer-rate {
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 0;
+    border-top: 1px solid #cfe7d8;
+    border-left: 0;
+    text-align: left;
+  }
+
+  body.fittrack-admin-dark-mode .admin-analytics-footer-rate {
+    border-top-color: #374151;
+  }
+}
+
+@media (max-width: 500px) {
+  .admin-analytics-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-analytics-actions {
+    display: grid;
+    grid-template-columns: 1fr 42px;
+  }
+
+  .admin-analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-analytics-stat-card {
+    min-height: 85px;
+  }
+
+  .admin-analytics-card {
+    padding: 17px;
+  }
+
+  .admin-analytics-card-title h3 {
+    font-size: 15px;
+  }
+
+  .admin-analytics-list-item span,
+  .admin-analytics-list-item strong {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .admin-analytics-page {
+    padding: 15px 10px;
+  }
+
+  .admin-analytics-period-info {
+    padding: 12px;
+  }
+
+  .admin-analytics-footer-card {
+    padding: 15px;
+  }
+}
+
+@keyframes adminAnalyticsSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

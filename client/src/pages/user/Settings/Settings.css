@@ -1,0 +1,463 @@
+/* =========================================================
+   SETTINGS PAGE
+========================================================= */
+
+.settings-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.settings-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.settings-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #2563eb;
+}
+
+.settings-page-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.settings-page-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   SUCCESS / MESSAGE
+========================================================= */
+
+.settings-success {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.settings-card {
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.settings-section-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.settings-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.settings-card-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   SETTINGS OPTION
+========================================================= */
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.settings-option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.settings-option-info strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.settings-option-info span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   TOGGLE SWITCH
+========================================================= */
+
+.settings-switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.settings-switch span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.settings-switch.active {
+  background: #2563eb;
+}
+
+.settings-switch.active span {
+  left: 25px;
+}
+
+.settings-switch:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.privacy-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.privacy-info > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.privacy-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+.privacy-info p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding-bottom: 20px;
+}
+
+.settings-reset-button,
+.settings-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-reset-button {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.settings-reset-button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.settings-save-button {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.settings-save-button:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.settings-reset-button:disabled,
+.settings-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.fittrack-dark-mode {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+body.fittrack-dark-mode .user-layout {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .user-main {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .user-content {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .settings-page {
+  color: #f3f4f6;
+}
+
+body.fittrack-dark-mode .settings-page-header h1 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .settings-page-header p {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .settings-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .settings-card-header {
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .settings-card-header h3,
+body.fittrack-dark-mode .settings-option-info strong {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .settings-card-header p,
+body.fittrack-dark-mode .settings-option-info span,
+body.fittrack-dark-mode .privacy-info p {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .settings-option {
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .settings-section-icon {
+  background: #172554;
+  color: #60a5fa;
+}
+
+body.fittrack-dark-mode .privacy-info {
+  background: #111827;
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .privacy-info strong {
+  color: #bfdbfe;
+}
+
+body.fittrack-dark-mode .settings-reset-button {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+body.fittrack-dark-mode .settings-reset-button:hover {
+  background: #374151;
+}
+
+body.fittrack-dark-mode .settings-success {
+  background: #064e3b;
+  color: #a7f3d0;
+  border-color: #065f46;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 20px 16px;
+  }
+
+  .settings-page-header h1 {
+    font-size: 27px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+  .settings-option-info {
+    max-width: calc(100% - 65px);
+  }
+
+  .settings-actions {
+    justify-content: stretch;
+  }
+
+  .settings-reset-button,
+  .settings-save-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 16px 12px;
+  }
+
+  .settings-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .settings-card-header {
+    align-items: flex-start;
+  }
+
+  .settings-section-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .settings-option {
+    gap: 12px;
+  }
+
+  .settings-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-reset-button,
+  .settings-save-button {
+    width: 100%;
+  }
+}
+
+.settings-error {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+body.fittrack-dark-mode .settings-error {
+  background: #450a0a;
+  color: #fecaca;
+  border-color: #7f1d1d;
+}

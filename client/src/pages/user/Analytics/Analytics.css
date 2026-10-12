@@ -1,0 +1,1132 @@
+.analytics-page {
+  width: 100%;
+  color: #212529;
+}
+
+/* Header */
+
+.analytics-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.analytics-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #198754;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 8px;
+}
+
+.analytics-header h1 {
+  margin: 0;
+  color: #212529;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.analytics-header p {
+  margin: 7px 0 0;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.analytics-period {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 170px;
+  padding: 11px 14px;
+  background: #fff;
+  border: 1px solid #e4e9e6;
+  border-radius: 10px;
+  color: #198754;
+}
+
+.analytics-period select {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #343a40;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Stats */
+
+.analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.analytics-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e4e9e6;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.analytics-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.analytics-stat-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 19px;
+}
+
+.analytics-stat-icon.workout {
+  background: #e8f7ef;
+  color: #198754;
+}
+
+.analytics-stat-icon.calories {
+  background: #fff2df;
+  color: #e67e22;
+}
+
+.analytics-stat-icon.nutrition {
+  background: #eee9ff;
+  color: #6f42c1;
+}
+
+.analytics-stat-icon.progress {
+  background: #e7f1ff;
+  color: #0d6efd;
+}
+
+.analytics-stat-card span {
+  display: block;
+  color: #6c757d;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.analytics-stat-card strong {
+  display: block;
+  color: #212529;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.analytics-stat-card small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #6c757d;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.analytics-stat-card small.positive {
+  color: #198754;
+}
+
+/* Cards */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.analytics-card {
+  background: #fff;
+  border: 1px solid #e4e9e6;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.analytics-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 22px 0;
+}
+
+.analytics-card-header h2 {
+  margin: 0;
+  color: #212529;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.analytics-card-header p {
+  margin: 5px 0 0;
+  color: #6c757d;
+  font-size: 13px;
+}
+
+.analytics-card-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #e8f7ef;
+  color: #198754;
+}
+
+.analytics-card-icon.nutrition {
+  background: #eee9ff;
+  color: #6f42c1;
+}
+
+.analytics-card-icon.progress {
+  background: #e7f1ff;
+  color: #0d6efd;
+}
+
+/* Workout Chart */
+
+.workout-chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 30px 28px 12px;
+}
+
+.workout-chart-column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.workout-chart-value {
+  color: #198754;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workout-chart-bar-wrapper {
+  width: 100%;
+  max-width: 42px;
+  height: 165px;
+  display: flex;
+  align-items: flex-end;
+  background: #f0f4f2;
+  border-radius: 8px 8px 4px 4px;
+  overflow: hidden;
+}
+
+.workout-chart-bar {
+  width: 100%;
+  min-height: 4px;
+  background: #198754;
+  border-radius: 8px 8px 3px 3px;
+  transition: height 0.3s ease;
+}
+
+.workout-chart-column > span {
+  color: #6c757d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.chart-summary,
+.nutrition-target {
+  display: flex;
+  gap: 35px;
+  padding: 15px 22px 20px;
+  border-top: 1px solid #edf0ee;
+}
+
+.chart-summary div,
+.nutrition-target div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.chart-summary span,
+.nutrition-target span {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.chart-summary strong,
+.nutrition-target strong {
+  color: #212529;
+  font-size: 16px;
+}
+
+/* Nutrition Chart */
+
+.nutrition-chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 30px 28px 12px;
+}
+
+.nutrition-chart-column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nutrition-chart-value {
+  color: #6f42c1;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.nutrition-chart-bar-wrapper {
+  width: 100%;
+  max-width: 42px;
+  height: 165px;
+  display: flex;
+  align-items: flex-end;
+  background: #f3f0fb;
+  border-radius: 8px 8px 4px 4px;
+  overflow: hidden;
+}
+
+.nutrition-chart-bar {
+  width: 100%;
+  min-height: 4px;
+  background: #6f42c1;
+  border-radius: 8px 8px 3px 3px;
+}
+
+.nutrition-chart-column > span {
+  color: #6c757d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Weight */
+
+.weight-card {
+  margin-bottom: 22px;
+}
+
+.weight-chart {
+  display: flex;
+  min-height: 310px;
+  padding: 30px 28px 15px;
+}
+
+.weight-chart-y-axis {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.weight-chart-y-axis span {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.weight-chart-area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.weight-grid-lines {
+  position: absolute;
+  inset: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weight-grid-lines span {
+  width: 100%;
+  border-top: 1px dashed #e4e9e6;
+}
+
+.weight-line {
+  position: absolute;
+  inset: 0 0 25px;
+}
+
+.weight-point-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.weight-point {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, 50%);
+  background: #198754;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #198754;
+}
+
+.weight-point span {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #198754;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.weight-labels {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weight-labels span {
+  color: #6c757d;
+  font-size: 10px;
+}
+
+.weight-summary {
+  display: flex;
+  gap: 50px;
+  padding: 16px 28px 22px;
+  border-top: 1px solid #edf0ee;
+}
+
+.weight-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.weight-summary span {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.weight-summary strong {
+  color: #212529;
+  font-size: 17px;
+}
+
+.weight-summary .weight-loss strong {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #198754;
+}
+
+/* Macros */
+
+.macros-card,
+.exercise-card {
+  min-height: 360px;
+}
+
+.macro-list {
+  padding: 25px 22px;
+}
+
+.macro-row {
+  margin-bottom: 24px;
+}
+
+.macro-row:last-child {
+  margin-bottom: 0;
+}
+
+.macro-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.macro-row-header span {
+  color: #495057;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.macro-row-header strong {
+  color: #212529;
+  font-size: 14px;
+}
+
+.macro-progress {
+  height: 9px;
+  background: #edf0ee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.macro-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.macro-progress-fill.protein {
+  background: #198754;
+}
+
+.macro-progress-fill.carbs {
+  background: #0d6efd;
+}
+
+.macro-progress-fill.fats {
+  background: #e67e22;
+}
+
+.macro-row small {
+  display: block;
+  margin-top: 5px;
+  color: #8a9298;
+  font-size: 10px;
+}
+
+/* Exercises */
+
+.exercise-list {
+  padding: 20px 22px;
+}
+
+.exercise-row {
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0ee;
+}
+
+.exercise-row:last-child {
+  border-bottom: 0;
+}
+
+.exercise-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.exercise-info strong {
+  color: #343a40;
+  font-size: 13px;
+}
+
+.exercise-info span {
+  color: #8a9298;
+  font-size: 11px;
+}
+
+.exercise-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exercise-progress-bar {
+  flex: 1;
+  height: 7px;
+  background: #edf0ee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.exercise-progress-bar div {
+  height: 100%;
+  background: #198754;
+  border-radius: 10px;
+}
+
+.exercise-progress > span {
+  min-width: 38px;
+  color: #198754;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Goal */
+
+.analytics-goal-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #198754, #146c43);
+  border-radius: 14px;
+  color: #fff;
+}
+
+.analytics-goal-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 13px;
+  font-size: 23px;
+}
+
+.analytics-goal-content {
+  flex: 1;
+}
+
+.analytics-goal-content > span {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.analytics-goal-content h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.analytics-goal-content p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+.analytics-goal-stat {
+  min-width: 100px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.analytics-goal-stat strong {
+  display: block;
+  font-size: 27px;
+}
+
+.analytics-goal-stat span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+}
+
+/* Dark Mode */
+
+body.fittrack-dark-mode .analytics-page {
+  color: #f3f4f6;
+}
+
+body.fittrack-dark-mode .analytics-header h1 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .analytics-header p {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .analytics-eyebrow {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-period {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .analytics-period select {
+  color: #e5e7eb;
+}
+
+body.fittrack-dark-mode .analytics-stat-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .analytics-stat-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.fittrack-dark-mode .analytics-stat-card span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .analytics-stat-card strong {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .analytics-stat-card small {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .analytics-stat-card small.positive {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-stat-icon.workout {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-stat-icon.calories {
+  background: #431407;
+  color: #fdba74;
+}
+
+body.fittrack-dark-mode .analytics-stat-icon.nutrition {
+  background: #2e1065;
+  color: #c4b5fd;
+}
+
+body.fittrack-dark-mode .analytics-stat-icon.progress {
+  background: #172554;
+  color: #93c5fd;
+}
+
+body.fittrack-dark-mode .analytics-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .analytics-card-header h2 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .analytics-card-header p {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .analytics-card-icon {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-card-icon.nutrition {
+  background: #2e1065;
+  color: #c4b5fd;
+}
+
+body.fittrack-dark-mode .analytics-card-icon.progress {
+  background: #172554;
+  color: #93c5fd;
+}
+
+body.fittrack-dark-mode .workout-chart-bar-wrapper,
+body.fittrack-dark-mode .nutrition-chart-bar-wrapper {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .workout-chart-column > span,
+body.fittrack-dark-mode .nutrition-chart-column > span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .workout-chart-value {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .nutrition-chart-value {
+  color: #c4b5fd;
+}
+
+body.fittrack-dark-mode .chart-summary,
+body.fittrack-dark-mode .nutrition-target,
+body.fittrack-dark-mode .weight-summary {
+  border-top-color: #374151;
+}
+
+body.fittrack-dark-mode .chart-summary span,
+body.fittrack-dark-mode .nutrition-target span,
+body.fittrack-dark-mode .weight-summary span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .chart-summary strong,
+body.fittrack-dark-mode .nutrition-target strong,
+body.fittrack-dark-mode .weight-summary strong {
+  color: #e5e7eb;
+}
+
+body.fittrack-dark-mode .weight-chart-y-axis span,
+body.fittrack-dark-mode .weight-labels span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .weight-grid-lines span {
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .weight-point {
+  border-color: #1f2937;
+  box-shadow: 0 0 0 2px #6ee7b7;
+  background: #198754;
+}
+
+body.fittrack-dark-mode .weight-point span {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .macro-row-header span,
+body.fittrack-dark-mode .exercise-info strong {
+  color: #d1d5db;
+}
+
+body.fittrack-dark-mode .macro-row-header strong {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .macro-progress,
+body.fittrack-dark-mode .exercise-progress-bar {
+  background: #374151;
+}
+
+body.fittrack-dark-mode .macro-row small,
+body.fittrack-dark-mode .exercise-info span {
+  color: #6b7280;
+}
+
+body.fittrack-dark-mode .exercise-row {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-dark-mode .exercise-progress > span {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-goal-card {
+  background: linear-gradient(135deg, #146c43, #064e3b);
+}
+
+@media (max-width: 1200px) {
+  .analytics-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .analytics-period {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-header h1 {
+    font-size: 27px;
+  }
+
+  .analytics-card-header {
+    padding: 18px 16px 0;
+  }
+
+  .workout-chart,
+  .nutrition-chart {
+    gap: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .workout-chart-value,
+  .nutrition-chart-value {
+    font-size: 8px;
+  }
+
+  .weight-chart {
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: auto;
+  }
+
+  .weight-chart-area {
+    min-width: 550px;
+  }
+
+  .weight-summary {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .analytics-goal-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .analytics-goal-stat {
+    width: 100%;
+    padding: 15px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.analytics-no-data {
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.analytics-no-data.small {
+  min-height: 250px;
+}
+
+.analytics-no-data > svg {
+  font-size: 38px;
+  color: #198754;
+  margin-bottom: 12px;
+}
+
+.analytics-no-data h3 {
+  margin: 0 0 5px;
+  color: #212529;
+  font-size: 16px;
+}
+
+.analytics-no-data p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+/* Additional Dark Mode */
+
+body.fittrack-dark-mode .analytics-card-icon {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-card-icon.nutrition {
+  background: #2e1065;
+  color: #c4b5fd;
+}
+
+body.fittrack-dark-mode .analytics-card-icon.progress {
+  background: #172554;
+  color: #93c5fd;
+}
+
+body.fittrack-dark-mode .analytics-card-header h2 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .analytics-card-header p {
+  color: #9ca3af;
+}
+
+/* Workout Chart */
+
+body.fittrack-dark-mode .workout-chart-bar-wrapper {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .workout-chart-column > span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .workout-chart-value {
+  color: #6ee7b7;
+}
+
+/* Nutrition Chart */
+
+body.fittrack-dark-mode .nutrition-chart-bar-wrapper {
+  background: #111827;
+}
+
+body.fittrack-dark-mode .nutrition-chart-column > span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .nutrition-chart-value {
+  color: #c4b5fd;
+}
+
+/* Chart Summary */
+
+body.fittrack-dark-mode .chart-summary,
+body.fittrack-dark-mode .nutrition-target {
+  border-top-color: #374151;
+}
+
+body.fittrack-dark-mode .chart-summary span,
+body.fittrack-dark-mode .nutrition-target span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .chart-summary strong,
+body.fittrack-dark-mode .nutrition-target strong {
+  color: #e5e7eb;
+}
+
+/* Weight Chart */
+
+body.fittrack-dark-mode .weight-chart-y-axis span,
+body.fittrack-dark-mode .weight-labels span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .weight-grid-lines span {
+  border-color: #374151;
+}
+
+body.fittrack-dark-mode .weight-point {
+  background: #198754;
+  border-color: #1f2937;
+  box-shadow: 0 0 0 2px #6ee7b7;
+}
+
+body.fittrack-dark-mode .weight-point span {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .weight-summary {
+  border-top-color: #374151;
+}
+
+body.fittrack-dark-mode .weight-summary span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .weight-summary strong {
+  color: #e5e7eb;
+}
+
+body.fittrack-dark-mode .weight-summary .weight-loss strong {
+  color: #6ee7b7;
+}
+
+/* Macros */
+
+body.fittrack-dark-mode .macro-row-header span {
+  color: #d1d5db;
+}
+
+body.fittrack-dark-mode .macro-row-header strong {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .macro-progress {
+  background: #374151;
+}
+
+body.fittrack-dark-mode .macro-row small {
+  color: #6b7280;
+}
+
+/* Exercise History */
+
+body.fittrack-dark-mode .exercise-row {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-dark-mode .exercise-info strong {
+  color: #e5e7eb;
+}
+
+body.fittrack-dark-mode .exercise-info span {
+  color: #6b7280;
+}
+
+body.fittrack-dark-mode .exercise-progress-bar {
+  background: #374151;
+}
+
+body.fittrack-dark-mode .exercise-progress > span {
+  color: #6ee7b7;
+}
+
+/* Goal Performance */
+
+body.fittrack-dark-mode .analytics-goal-card {
+  background: linear-gradient(135deg, #146c43, #064e3b);
+}
+
+body.fittrack-dark-mode .analytics-goal-content > span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body.fittrack-dark-mode .analytics-goal-content h3 {
+  color: #ffffff;
+}
+
+body.fittrack-dark-mode .analytics-goal-content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.fittrack-dark-mode .analytics-goal-stat strong {
+  color: #ffffff;
+}
+
+body.fittrack-dark-mode .analytics-goal-stat span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* No Data */
+
+body.fittrack-dark-mode .analytics-no-data {
+  background: transparent;
+}
+
+body.fittrack-dark-mode .analytics-no-data > svg {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .analytics-no-data h3 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .analytics-no-data p {
+  color: #9ca3af;
+}

@@ -1,0 +1,751 @@
+.notifications-page {
+  width: 100%;
+  padding: 28px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.notifications-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.notifications-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #198754;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.notifications-header h1 {
+  margin: 0 0 8px;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.notifications-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.notifications-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark-all-button,
+.clear-all-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mark-all-button {
+  border: 1px solid #198754;
+  background: #198754;
+  color: #fff;
+}
+
+.mark-all-button:hover {
+  background: #157347;
+  border-color: #157347;
+}
+
+.clear-all-button {
+  border: 1px solid #dc3545;
+  background: #fff;
+  color: #dc3545;
+}
+
+.clear-all-button:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.notification-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.notification-stat {
+  min-height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.notification-stat-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #e8f5ee;
+  color: #198754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.notification-stat span {
+  display: block;
+  margin-bottom: 5px;
+  color: #6b7280;
+  font-size: 0.82rem;
+}
+
+.notification-stat strong {
+  display: block;
+  color: #1f2937;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* =========================
+   FILTER BAR
+========================= */
+
+.notifications-filter-bar {
+  margin-bottom: 20px;
+  padding: 6px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.notifications-filter-bar button {
+  min-width: 90px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notifications-filter-bar button:hover {
+  color: #198754;
+  background: #f3f8f5;
+}
+
+.notifications-filter-bar button.active {
+  background: #198754;
+  color: #fff;
+}
+
+.notifications-filter-bar button span {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 20px;
+  background: #fff;
+  color: #198754;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* =========================
+   NOTIFICATION LIST
+========================= */
+
+.notifications-list {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.notification-item {
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid #edf0f2;
+  transition: background 0.2s ease;
+}
+
+.notification-item:last-child {
+  border-bottom: 0;
+}
+
+.notification-item.unread {
+  background: #fbfefc;
+}
+
+.notification-item.unread:hover {
+  background: #f4faf7;
+}
+
+.notification-item.read {
+  background: #fff;
+}
+
+.notification-item.read:hover {
+  background: #fafafa;
+}
+
+/* =========================
+   NOTIFICATION ICON
+========================= */
+
+.notification-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.notification-icon.workout {
+  background: #e8f5ee;
+  color: #198754;
+}
+
+.notification-icon.goal {
+  background: #f1eafd;
+  color: #7952b3;
+}
+
+.notification-icon.nutrition {
+  background: #fff3df;
+  color: #d97706;
+}
+
+.notification-icon.progress {
+  background: #e9f0ff;
+  color: #3b73d1;
+}
+
+.notification-icon.system {
+  background: #eef1f4;
+  color: #6b7280;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.notification-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.notification-title-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 7px;
+}
+
+.notification-title-row h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.notification-item.read .notification-title-row h3 {
+  color: #374151;
+  font-weight: 600;
+}
+
+.notification-content p {
+  max-width: 850px;
+  margin: 0 0 8px;
+  color: #6b7280;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.notification-content small {
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.unread-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #198754;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.notification-actions button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: #fff;
+  color: #198754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notification-actions button:hover {
+  background: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+
+.notification-actions .notification-delete {
+  color: #dc3545;
+}
+
+.notification-actions .notification-delete:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.notifications-empty {
+  min-height: 330px;
+  padding: 45px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.notifications-empty-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #e8f5ee;
+  color: #198754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.notifications-empty h3 {
+  margin: 0 0 8px;
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.notifications-empty p {
+  max-width: 400px;
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .notifications-page {
+    padding: 24px;
+  }
+
+  .notifications-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .notifications-header-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .notification-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .notifications-page {
+    padding: 20px 16px;
+  }
+
+  .notifications-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .notifications-header-actions {
+    width: 100%;
+  }
+
+  .mark-all-button,
+  .clear-all-button {
+    flex: 1;
+  }
+
+  .notification-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .notification-stat {
+    min-height: 85px;
+  }
+
+  .notification-item {
+    padding: 17px;
+    gap: 12px;
+  }
+
+  .notification-title-row {
+    align-items: flex-start;
+  }
+
+  .notification-actions {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-header-actions {
+    flex-direction: column;
+  }
+
+  .mark-all-button,
+  .clear-all-button {
+    width: 100%;
+    flex: none;
+  }
+
+  .notifications-filter-bar {
+    width: 100%;
+  }
+
+  .notifications-filter-bar button {
+    flex: 1;
+  }
+
+  .notification-item {
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  .notification-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .notification-content {
+    width: calc(100% - 58px);
+  }
+
+  .notification-actions {
+    width: 100%;
+    justify-content: flex-end;
+    padding-left: 58px;
+  }
+
+  .notification-content p {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.fittrack-dark-mode .notifications-page {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+body.fittrack-dark-mode .notifications-eyebrow {
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .notifications-header h1 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .notifications-header p {
+  color: #9ca3af;
+}
+
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+body.fittrack-dark-mode .mark-all-button {
+  background: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+
+body.fittrack-dark-mode .mark-all-button:hover {
+  background: #157347;
+  border-color: #157347;
+}
+
+body.fittrack-dark-mode .clear-all-button {
+  background: #111827;
+  border-color: #dc3545;
+  color: #fca5a5;
+}
+
+body.fittrack-dark-mode .clear-all-button:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+/* =========================
+   STATS
+========================= */
+
+body.fittrack-dark-mode .notification-stat {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .notification-stat:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.fittrack-dark-mode .notification-stat-icon {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .notification-stat span {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .notification-stat strong {
+  color: #f9fafb;
+}
+
+/* =========================
+   FILTER BAR
+========================= */
+
+body.fittrack-dark-mode .notifications-filter-bar {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .notifications-filter-bar button {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .notifications-filter-bar button:hover {
+  color: #6ee7b7;
+  background: #273449;
+}
+
+body.fittrack-dark-mode .notifications-filter-bar button.active {
+  background: #198754;
+  color: #ffffff;
+}
+
+body.fittrack-dark-mode .notifications-filter-bar button span {
+  background: #111827;
+  color: #6ee7b7;
+}
+
+/* =========================
+   NOTIFICATION LIST
+========================= */
+
+body.fittrack-dark-mode .notifications-list {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+body.fittrack-dark-mode .notification-item {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-dark-mode .notification-item.unread {
+  background: #17261f;
+}
+
+body.fittrack-dark-mode .notification-item.unread:hover {
+  background: #1b3228;
+}
+
+body.fittrack-dark-mode .notification-item.read {
+  background: #1f2937;
+}
+
+body.fittrack-dark-mode .notification-item.read:hover {
+  background: #273449;
+}
+
+/* =========================
+   NOTIFICATION ICONS
+========================= */
+
+body.fittrack-dark-mode .notification-icon.workout {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .notification-icon.goal {
+  background: #2e1065;
+  color: #c4b5fd;
+}
+
+body.fittrack-dark-mode .notification-icon.nutrition {
+  background: #431407;
+  color: #fdba74;
+}
+
+body.fittrack-dark-mode .notification-icon.progress {
+  background: #172554;
+  color: #93c5fd;
+}
+
+body.fittrack-dark-mode .notification-icon.system {
+  background: #374151;
+  color: #9ca3af;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+body.fittrack-dark-mode .notification-title-row h3 {
+  color: #f9fafb;
+}
+
+body.fittrack-dark-mode .notification-item.read .notification-title-row h3 {
+  color: #d1d5db;
+}
+
+body.fittrack-dark-mode .notification-content p {
+  color: #9ca3af;
+}
+
+body.fittrack-dark-mode .notification-content small {
+  color: #6b7280;
+}
+
+body.fittrack-dark-mode .unread-dot {
+  background: #6ee7b7;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+body.fittrack-dark-mode .notification-actions button {
+  background: #111827;
+  border-color: #374151;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .notification-actions button:hover {
+  background: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+
+body.fittrack-dark-mode .notification-actions .notification-delete {
+  color: #fca5a5;
+}
+
+body.fittrack-dark-mode .notification-actions .notification-delete:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+body.fittrack-dark-mode .notifications-empty {
+  background: #1f2937;
+}
+
+body.fittrack-dark-mode .notifications-empty-icon {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+
+body.fittrack-dark-mode .notifications-empty h3 {
+  color: #e5e7eb;
+}
+
+body.fittrack-dark-mode .notifications-empty p {
+  color: #9ca3af;
+}

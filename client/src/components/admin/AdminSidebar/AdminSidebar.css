@@ -1,0 +1,250 @@
+.admin-sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8ebf0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.admin-sidebar-logo {
+  height: 72px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eef0f4;
+  transition: border-color 0.25s ease;
+}
+
+.admin-sidebar-logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.admin-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #198754;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.admin-logo-text {
+  color: #17202a;
+  font-size: 22px;
+  font-weight: 800;
+  transition: color 0.25s ease;
+}
+
+.admin-logo-text span {
+  color: #198754;
+}
+
+.admin-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px 15px;
+}
+
+.admin-sidebar-section {
+  margin-bottom: 28px;
+}
+
+.admin-sidebar-title {
+  display: block;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  color: #9aa2ad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-sidebar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 13px;
+  border-radius: 9px;
+  color: #68727e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-sidebar-link svg {
+  width: 16px;
+  font-size: 16px;
+}
+
+.admin-sidebar-link:hover {
+  background: #f1f8f4;
+  color: #198754;
+}
+
+.admin-sidebar-link.active {
+  background: #eaf7f0;
+  color: #198754;
+}
+
+.admin-sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 22px;
+  border-radius: 0 5px 5px 0;
+  background: #198754;
+}
+
+.admin-sidebar-bottom {
+  padding: 18px 15px;
+  border-top: 1px solid #eef0f4;
+  transition: border-color 0.25s ease;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+
+.admin-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #198754;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.admin-profile-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-profile-info strong {
+  color: #252b32;
+  font-size: 13px;
+  transition: color 0.25s ease;
+}
+
+.admin-profile-info span {
+  color: #9aa2ad;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.admin-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #d9534f;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-logout:hover {
+  background: #fff2f1;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar {
+  background: #1f2937;
+  border-right-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-logo {
+  border-bottom-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-logo-text {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-logo-text span {
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-title {
+  color: #6b7280;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-link {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-link:hover {
+  background: #273444;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-link.active {
+  background: #173d2d;
+  color: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-link.active::before {
+  background: #34d399;
+}
+
+body.fittrack-admin-dark-mode .admin-sidebar-bottom {
+  border-top-color: #374151;
+}
+
+body.fittrack-admin-dark-mode .admin-profile-info strong {
+  color: #f3f4f6;
+}
+
+body.fittrack-admin-dark-mode .admin-profile-info span {
+  color: #9ca3af;
+}
+
+body.fittrack-admin-dark-mode .admin-logout {
+  color: #f87171;
+}
+
+body.fittrack-admin-dark-mode .admin-logout:hover {
+  background: #3a2527;
+}
+
+@media (max-width: 991px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,141 @@
+
+.main-footer {
+  background: #111914;
+  padding: 75px 0 25px;
+  color: white;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #198754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.footer-brand h3 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.footer-brand h3 span {
+  color: #69c894;
+}
+
+.footer-description {
+  max-width: 430px;
+  color: #7f8b83;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* Social */
+
+.footer-socials {
+  display: flex;
+  gap: 9px;
+}
+
+.footer-socials a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #89958d;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #198754;
+  border-color: #198754;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.main-footer h5 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.main-footer a {
+  display: block;
+  width: fit-content;
+  color: #7f8b83;
+  font-size: 12px;
+  margin-bottom: 13px;
+  transition: all 0.2s ease;
+}
+
+.main-footer a:hover {
+  color: #69c894;
+  transform: translateX(2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 55px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #606c64;
+  font-size: 11px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  margin: 0;
+  color: #606c64;
+  font-size: 11px;
+}
+
+.footer-bottom-links a:hover {
+  color: #69c894;
+}
+
+@media (max-width: 767px) {
+  .main-footer {
+    padding: 55px 0 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-socials {
+    margin-bottom: 10px;
+  }
+}
+
