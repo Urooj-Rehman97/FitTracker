@@ -1,4 +1,4 @@
-const API_BASE_URL = "/api";
+const API_BASE_URL =  "https://fittracker-4ifk.onrender.com/api";
 
 // ==================================================
 // BASE API REQUEST
