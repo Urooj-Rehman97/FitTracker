@@ -1,3 +1,4 @@
+
 const API_BASE_URL = "https://fittracker-4ifk.onrender.com/api";
 
 const publicRequest = async (endpoint, options = {}) => {
@@ -9,10 +10,18 @@ const publicRequest = async (endpoint, options = {}) => {
     },
   });
 
-  const data = await response.json();
+  let data = {};
+
+  try {
+    data = await response.json();
+  } catch {
+    data = {};
+  }
 
   if (!response.ok) {
-    throw new Error(data.message || "Public API request failed");
+    throw new Error(
+      data.message || `Public API request failed (${response.status})`
+    );
   }
 
   return data;
